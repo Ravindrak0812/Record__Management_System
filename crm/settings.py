@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-&1u1@wpg1y8rro8zmgi@%1fg%ju@fu$q^*%3tum&eds6a(!4zf
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
+ALLOWED_HOSTS = ['portfolio-project1-g5h7.onrender.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -35,6 +35,7 @@ INSTALLED_APPS = [
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
+        'whitenoise.middleware.WhiteNoiseMiddleware', 
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -49,7 +50,7 @@ ROOT_URLCONF = 'crm.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
